@@ -16,15 +16,15 @@ def input_data():
         var = int(input('Enter number: '))
 
     if var == 1:
-        with open('Lesson12/data_first.csv', 'a', encoding='utf-8') as f:
+        with open('data_first.csv', 'a', encoding='utf-8') as f:
             f.write(f"\n{name}\n{surname}\n{phone}\n{address}\n")
     elif var == 2:
-        with open('Lesson12/data_second.csv', 'a', encoding='utf-8') as f:
+        with open('data_second.csv', 'a', encoding='utf-8') as f:
             f.write(f"\n{name}; {surname}; {phone}; {address}\n")
 
 def print_data():
     print ('1 file data: \n')
-    with open('Lesson12/data_first.csv', 'r', encoding='utf-8') as f:
+    with open('data_first.csv', 'r', encoding='utf-8') as f:
         data_first = f.readlines()
         data_first_list = []
         j = 0
@@ -35,6 +35,6 @@ def print_data():
         print(''.join(data_first_list))
     
     print ('2 file data: \n')
-    with open('Lesson12/data_second.csv', 'r', encoding='utf-8') as f:
+    with open('data_second.csv', 'r', encoding='utf-8') as f:
         data_second = f.readlines()
         print(*data_second) # * распаковывет список для красивого вывода
