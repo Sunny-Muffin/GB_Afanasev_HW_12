@@ -17,10 +17,10 @@ def input_data():
 
     if var == 1:
         with open('data_first.csv', 'a', encoding='utf-8') as f:
-            f.write(f"\n{name}\n{surname}\n{phone}\n{address}\n")
+            f.write(f"{name}\n{surname}\n{phone}\n{address}\n\n")
     elif var == 2:
         with open('data_second.csv', 'a', encoding='utf-8') as f:
-            f.write(f"\n{name}; {surname}; {phone}; {address}\n")
+            f.write(f"{name}; {surname}; {phone}; {address}\n\n")
 
 def print_data():
     print ('1 file data: \n')
