@@ -20,13 +20,16 @@ def read_data(file_path, file_num):
 
 def print_data(data):
     data_len = len(data)
+    # print (data_len)
+    if data_len < 1:
+        return 0
     for i in range(data_len):
         # добавить проверку на длину файла, если данных нет, то выводить сообщение!
         if data[i][0] == '\n':
             print(f"{i+1}{data[i]}")
         else:
             print(f"{i+1}\n{data[i]}")
-    block = int(input('Enter number of block you want to delete: '))
+    block = int(input('Enter number of block you want to change or delete: '))
     while block <= 0 or block > data_len:
         print ('Incorrect input')
         block = int(input('Enter number: '))
